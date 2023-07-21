@@ -1,0 +1,106 @@
+html,
+body {
+    scroll-snap-type: y mandatory;
+    padding: 0px;
+    margin: -1px;
+    font-family: 'GFS Neohellenic', sans-serif;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+    font-family: 'GFS Neohellenic', sans-serif;
+}
+
+section {
+    height: 100vh;
+    scroll-snap-align: start;
+    font-family: 'GFS Neohellenic', sans-serif;
+}
+
+
+#container{
+    display: flex;
+    flex-direction: column;
+    font-family: 'GFS Neohellenic', sans-serif;
+}
+
+#container #home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'GFS Neohellenic', sans-serif;
+}
+
+#home, #tldr, #contact {
+    background-color:#FFFF19;
+}
+
+#about, #experience {
+    background-color: #FFCCFF;
+}
+
+#home h1 {
+    font-size: 72px;
+    margin-bottom: -10px;
+}
+
+#home p {
+    font-size: 36px;
+}
+
+#home-buttons {
+    position:relative;
+    margin-top: 24px;
+    font-family: 'GFS Neohellenic', sans-serif;
+
+}
+
+#home-buttons > #davidButton , #home-buttons > #christianButton{
+    border:1px solid black;
+    padding: 11px 25px;
+    font-family: 'GFS Neohellenic', sans-serif;
+    font-size: 16px;
+    border-radius: 18px;
+}
+
+#home-buttons > #davidButton {
+       padding: 10px 30px;
+}
+
+#home-buttons > #davidButton:hover, #home-buttons > #christianButton:hover{
+    background-color: #FFFF;
+    border:#fff;
+    font-size:18px;
+    font-weight: 700;
+}
+
+.button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+#davidButton {
+    position:absolute;
+    transform: translate(-130%, -30%);
+    transition: top 0.5s, left 0.5s;
+}
+
+#christianButton {
+    position: absolute;
+    transform: translate(40%, -30%);
+    transition: top 0.5s, left 0.5s;
+}
+
+
+#about .david-content, #tldr .david-content, #experience .david-content {
+    padding-top:60px;
+    padding-left: 200px;
+    padding-right: 80px;
+}
+
+#tldr .david-content h2 {
+    font-size: 72px;
+
+}

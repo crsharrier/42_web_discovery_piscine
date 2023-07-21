@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Love</title>
+
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="sidebar.css">
+    <!--Poppins Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <style>
+        .homeIcon {
+            font-size: 60px;
+            font-weight: 200;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sidebar-outer">
+        <div class="sidebar hidden">
+            <span class="material-symbols-outlined homeIcon" onclick="scrollToSection('home')">
+                home
+            </span>
+            <div id="gapForName"></div>
+            <button class="sidebar-button" onclick="scrollToSection('about')">
+                <span class="material-symbols-outlined">
+                    person
+                </span>
+                <span class="hover-text">About</span>
+            </button>
+            <button class="sidebar-button" onclick="scrollToSection('tldr')">
+                <span class="material-symbols-outlined">
+                    bolt
+                </span>
+                <span class="hover-text">TL;DR</span>
+            </button>
+            <button class="sidebar-button" onclick="scrollToSection('experience')">
+                <span class="material-symbols-outlined">
+                    menu
+                </span>
+                <span class="hover-text">Experience</span>
+            </button>
+            <button class="sidebar-button" onclick="scrollToSection('contact')">
+                <span class="material-symbols-outlined">
+                    call
+                </span>
+                <span class="hover-text">Contact</span>
+            </button>
+        </div>
+        <button id="davidButton" class="nameButton">David</button>
+        <button id="christianButton" class="nameButton">Christian</button>
+    </div>
+    <section id="home" style="background-color: bisque;">
+        <h1>
+            Home
+        </h1>
+        <span id="origDave"></span>
+        <span id="origChris"></span>
+    </section>
+    <section id="about" style="background-color:lightcyan;"></section>
+    <section id="tldr" style="background-color: lightsteelblue;"></section>
+    <section id="experience" style="background-color: bisque;"></section>
+    <section id="contact" style="background-color: lightcyan;"></section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script src='nav.js'></script>
+    <script src='content.js'></script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+#colorSquare {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    height: 300px;
+    width: 300px;
+    background: lightgray;
+}
+
+#clickMeFrame {
+    /*vertical-align: 50%;*/
+    /*align-self: center;*/
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+}
+

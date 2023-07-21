@@ -1,0 +1,31 @@
+.parallaxFirst {
+    background-image: url(https://media.istockphoto.com/id/1288385045/photo/snowcapped-k2-peak.jpg?b=1&s=612x612&w=0&k=20&c=e1AiD8S8C5tvF8ZA24I2Q_5myDSgLdxwU385j_yzG-0=);
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallaxSecond {
+    background-image: url(https://www.woodlandtrust.org.uk/media/49424/ancient-beech-trees-fagus-sylvatica-lineover-wood-second-largest-beech-tree-eng-npl01541225-nick-turner.jpg);
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.quoteText {
+    font-family: Baskerville;
+    font-size: 100px;
+    color: blanchedalmond;
+    text-align: center;
+}
+
+.buffer {
+    width: 100%;
+    min-height: 60vh;
+    background-color: black;
+}

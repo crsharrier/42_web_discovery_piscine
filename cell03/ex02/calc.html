@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculator</title>
+    <style>
+        #outerFrame {
+            width: 70%;
+            height: 20vh;
+            margin: auto;
+            background-color: rgb(220, 238, 245);
+            border-radius: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #innerFrame {
+            position: absolute;
+            top: 30%;
+            width: 100%;
+            margin: auto;
+            text-align: center;
+        }
+
+        .numberInput {
+            width: 80px;
+            height: 50px;
+            font-size: 40px;
+            text-align: center;
+        }
+
+        #tryMe {
+            height: 40px;
+            border-radius: 10%;
+            background-color: rgb(60, 183, 231);
+            color: aliceblue;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="outerFrame">
+        <div id="innerFrame">
+            <form id="myform" onsubmit="showResult(event)">
+                <input class="numberInput" type="number" id="leftMember">
+                <select class="numberInput" id="operand">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                    <option value="%">%</option>
+                </select>
+                <input class="numberInput" type="number" id="rightMember">
+                <!--<input id="tryMe" type="submit" value="Try Me!">-->
+                <button id="tryMe" onclick="showResult()">Try Me</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+
+        function idleAlert(){
+            window.alert('Please, use me...')
+        }
+        setInterval(idleAlert, 30000);
+
+        function showResult(event) {
+            event.preventDefault();
+
+            let result = 0
+            let leftMember = Number(document.querySelector("#leftMember").value)
+            let rightMember = Number(document.querySelector("#rightMember").value)
+            let operand = document.querySelector("#operand").value
+
+            if (leftMember < 0 || rightMember < 0) {
+                window.alert('Error :(')
+                return
+            }
+
+            if (operand == '/' || operand == '%') {
+                if (rightMember == 0) {
+                    let message = 'It’s over 9000!'
+                    window.alert(message)
+                    console.log(message)
+                    return
+                }
+            }
+
+            switch (operand) {
+                case '+':
+                    result = leftMember + rightMember;
+                    break;
+                case '-':
+                    result = leftMember - rightMember;
+                    break;
+                case '*':
+                    result = leftMember * rightMember;
+                    break;
+                case '/':
+                    result = leftMember / rightMember;
+                    break;
+                case '%':
+                    result = leftMember % rightMember;
+                    break;
+            }
+            let resultMessage = `Result = ${String(result)}`
+            console.log(resultMessage)
+            window.alert(resultMessage)
+        }
+
+    </script>
+</body>
+
+</html>

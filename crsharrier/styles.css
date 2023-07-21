@@ -1,0 +1,40 @@
+html,
+body {
+    scroll-snap-type: y mandatory;
+    padding: 0px;
+    margin: 0;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+section {
+    height: 100vh;
+    scroll-snap-align: start;
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.nameButton {
+    display: block;
+    position: relative;
+    opacity: 1;
+    transition: top 0.5s, left 0.5s;
+}
+
+#origDave {
+    position: fixed;
+    top: 40%;
+    left: 35%;
+}
+
+#origChris {
+    position: fixed;
+    top: 40%;
+    left: 65%;
+}
